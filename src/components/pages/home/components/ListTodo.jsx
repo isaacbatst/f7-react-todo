@@ -1,21 +1,19 @@
 import React from "react";
-import { useSelector } from 'react-redux';
-import { List, ListItem } from "framework7-react";
+import { useSelector } from "react-redux";
+import { List } from "framework7-react";
+
+import Todo from "./Todo";
 
 export default () => {
-
   const todos = useSelector(state => state.todos.todos);
-
+  console.log(todos)
   return (
     <List>
-      {todos.map(todo => (
-        <ListItem
-          key={todo.id}
-          title={todo.name}
-          defaultChecked={todo.checked}
-          checkbox
-        ></ListItem>
-      ))}
+      <ul>
+        {todos.map(todo => (
+          <Todo key={todo.id} todo={todo} />
+        ))}
+      </ul>
     </List>
   );
 };

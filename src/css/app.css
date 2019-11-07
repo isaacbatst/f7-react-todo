@@ -4,3 +4,6 @@
 }
 
 /* Your app custom styles here */
+li.checked .item-title{
+  text-decoration: line-through;
+}

@@ -9,7 +9,9 @@ const INITIAL_STATE = {
 export default (state = INITIAL_STATE, action) => {
   switch(action.type){
     case 'ADD_TODO':
-      return { ...state, todos: [ ...state.todos, todos ] };
+      return { ...state, todos: [ ...state.todos, action.payload.todo ] };
+    case 'TOGGLE_TODO':
+      return { ...state, todos: action.payload.todos }
     default: 
       return state;
   }
