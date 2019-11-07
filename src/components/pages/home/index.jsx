@@ -1,12 +1,8 @@
 import React from "react";
 import {
-  f7,
   Page,
   List,
   ListItem,
-  ListInput,
-  Block,
-  Button
 } from "framework7-react";
 
 import NavbarHome from "./components/NavbarHome";
