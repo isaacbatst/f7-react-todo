@@ -1,35 +1,16 @@
 import React from "react";
-import {
-  Page,
-  List,
-  ListItem,
-} from "framework7-react";
+import { Page } from "framework7-react";
 
 import NavbarHome from "./components/NavbarHome";
 import FormNewTodo from "./components/FormNewTodo";
+import ListTodo from "./components/ListTodo";
 
 export default () => {
-  const todos = [
-    { id: 1, name: "Fazer café", checked: false },
-    { id: 2, name: "Fazer café", checked: true },
-    { id: 3, name: "Fazer café", checked: false }
-  ];
-
   return (
     <Page name="home">
       <NavbarHome />
       <FormNewTodo />
-
-      <List>
-        {todos.map(todo => (
-          <ListItem
-            key={todo.id}
-            title={todo.name}
-            defaultChecked={todo.checked}
-            checkbox
-          ></ListItem>
-        ))}
-      </List>
+      <ListTodo />
     </Page>
   );
 };
